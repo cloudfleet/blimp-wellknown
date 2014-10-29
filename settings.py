@@ -6,7 +6,7 @@ JINJA_ENV = Environment(loader=PackageLoader('wellknown', 'templates'))
 LINKS = [
     {
         "rel": "lrdd",
-        "template": "https://%s/webfinger/jrd?resource={uri}" % os.getenv("CLOUDFLEET_HOST", "example.com")
+        "template": "https://%s/musterroll/webfinger/jrd?resource={uri}" % os.getenv("CLOUDFLEET_HOST", "example.com")
     }
 ]
 
