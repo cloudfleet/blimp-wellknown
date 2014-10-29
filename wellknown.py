@@ -9,7 +9,7 @@ def send_host_meta_json():
         "links": settings.LINKS
     })
 
-@app.route('/.well-known/host-meta', methods=['GET'])
+@app.route('/host-meta', methods=['GET'])
 def send_host_meta_xrd():
     return settings.JINJA_ENV.get_template("host-meta.xrd.tpl").render(links=settings.LINKS)
 
