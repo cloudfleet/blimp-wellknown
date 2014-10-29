@@ -3,7 +3,7 @@ import settings, getopt, sys, os
 app = Flask(__name__)
 
 
-@app.route('/.well-known/host-meta.json', methods=['GET'])
+@app.route('/host-meta.json', methods=['GET'])
 def send_host_meta_json():
     return jsonify({
         "links": settings.LINKS
