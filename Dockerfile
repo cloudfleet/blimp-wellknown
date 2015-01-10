@@ -1,10 +1,10 @@
-from debian:wheezy
+FROM debian:wheezy
 
 
-run (apt-get update && apt-get install -y python python-flask)
-copy . /opt/cloudfleet/app
-workdir /opt/cloudfleet/app
+RUN (apt-get update && apt-get install -y python python-flask)
+COPY . /opt/cloudfleet/app
+WORKDIR /opt/cloudfleet/app
 
-cmd python -u wellknown.py
+CMD python -u wellknown.py
 
-expose 80
+EXPOSE 80
